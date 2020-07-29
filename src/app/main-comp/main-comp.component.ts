@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-main-comp',
+  templateUrl: './main-comp.component.html',
+  styleUrls: ['./main-comp.component.css']
 })
-export class AppComponent {
+export class MainCompComponent implements OnInit {
+
   taskList: Array<string> = [];
   taskDone: Array<string> = [];
 
@@ -21,4 +22,9 @@ export class AppComponent {
     this.taskDone.push(task);
     this.remove(task);
   }
+  constructor() { }
+
+  ngOnInit() {
+  }
+
 }
