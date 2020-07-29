@@ -6,19 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  taskList: Array<string> = [];
-  taskDone: Array<string> = [];
-
-  add(task: string) {
-    this.taskList.push(task);
-  }
-
-  remove(task: string) {
-    this.taskList = this.taskList.filter(e => e !== task); //filtrujemy(usuwamy) elementy z listy które sa taskiem
-  }
-
-  done(task: string) {
-    this.taskDone.push(task);
-    this.remove(task);
-  }
 }
